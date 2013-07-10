@@ -1,0 +1,4 @@
+#!/bin/sh
+this_dir=$(dirname $(realpath $0))
+. ${this_dir}/env/bin/activate
+${this_dir}/tvuster-email.py "$@"
