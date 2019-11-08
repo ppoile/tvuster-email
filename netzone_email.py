@@ -129,7 +129,7 @@ u'Postfach (POP3/IMAP) Übersicht:'
                 "hvml/%s" % full_email_address)
             soup = BeautifulSoup(resp.content)
             table = soup.find("table", {"class" : "dbtable"})
-            assert table.findPrevious("h4").text == u'Empfängerliste:'
+            assert table.findPrevious("h4").text == u'Adressliste Import/Export:'
             heading_row = table.findAll('tr')[0]
             headings = [x.text for x in heading_row.findAll('th')]
             assert len(headings) == 4
